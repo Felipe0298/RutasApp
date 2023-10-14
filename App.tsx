@@ -1,19 +1,12 @@
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import Icon from "react-native-vector-icons/Ionicons";
+import { Navigator } from './src/navigator/Navigator';
 
 export const App = () => {
   return (
-    <View>
-      <Icon
-      name='star-outline'
-      color='red'
-      size={50} 
-      />
-    </View>
+    <NavigationContainer>
+      <Navigator/>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-
-});
