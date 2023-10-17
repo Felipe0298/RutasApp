@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import MapView, { MapMarkerProps, Marker } from 'react-native-maps';
 import { useLocation } from '../hooks/useLocation';
 import { LoadingScreen } from '../pages/LoadingScreen';
+import { Fab } from './Fab';
 
 
 type Props = {
@@ -40,6 +41,16 @@ export const Map = ({markers}:Props) => {
           description="esto es una descr"
         /> */}
       </MapView>
+
+      <Fab
+        iconName='star-outline'
+        onPress={() => console.log('first')}
+        style={{
+          position:'absolute',
+          bottom: 20,
+          right: 20
+        }}
+      />
     </>
   );
 }
